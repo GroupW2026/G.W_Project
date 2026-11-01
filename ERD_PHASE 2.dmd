@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="ERD_PHASE 2" id="96D59D6E-0264-DC6F-24CA-4041F451B5A8" version="3.5">
+<createdBy>Hluma</createdBy>
+<createdTime>2026-09-19 22:08:56 UTC</createdTime>
+<ownerDesignName>ERD_PHASE 2</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>96D59D6E-0264-DC6F-24CA-4041F451B5A8</designId>
+</OSDM_Design>
