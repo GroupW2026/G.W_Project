@@ -1,0 +1,108 @@
+﻿@model IEnumerable<LifeStyleCarwash.Web.Models.Bookings>
+@{
+    ViewData["Title"] = "Service Queue";
+    var staffList = ViewBag.StaffList as List<LifeStyleCarwash.Web.Models.Staff> ?? new List<LifeStyleCarwash.Web.Models.Staff>();
+    var occupiedBays = ViewBag.OccupiedBays as List<string> ?? new List<string>();
+    var occupiedStaff = ViewBag.OccupiedStaff as List<string> ?? new List<string>();
+}
+
+<h1 class="page-title">SERVICE QUEUE</h1>
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+}
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+}
+
+<div class="table-responsive">
+    <table class="table custom-table">
+        <thead>
+            <tr>
+                <th>TICKET</th>
+                <th>CUSTOMER</th>
+                <th>SERVICE</th>
+                <th>STATUS</th>
+                <th>BAY</th>
+                <th>STAFF</th>
+                <th>ACTION</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var booking in Model)
+            {
+                <tr>
+                    <td><strong>#@booking.Id</strong></td>
+                    <td>@booking.CustomerName.ToUpper()</td>
+                    <td>@booking.ServiceType.ToUpper()</td>
+
+                    <form asp-action="UpdateQueueRow" method="post">
+                        <input type="hidden" name="id" value="@booking.Id" />
+
+                        <!-- STATUS DROPDOWN -->
+                    <td>
+                        <select name="status" class="form-control" style="border-radius: 20px; border-color: #84B0D6;">
+                            <option value="Waiting" selected="@(booking.Status == "Waiting")">Waiting</option>
+                            <option value="In Progress" selected="@(booking.Status == "In Progress")">In Progress</option>
+                            
+                        </select>
+                    </td>
+
+                    <!-- BAY DROPDOWN -->
+                    <td>
+                        <select name="bay" class="form-control" style="border-radius: 20px; border-color: #84B0D6;">
+                            <option value="">Unassigned</option>
+                            @for (int i = 1; i <= 6; i++)
+                            {
+                                var bayName = $"Bay {i}";
+                                // Check if bay is occupied by SOMEONE ELSE
+                                bool isOccupiedByOther = occupiedBays.Contains(bayName) && booking.AssignedBay != bayName;
+
+                                if (isOccupiedByOther)
+                                {
+                                    <option value="" disabled>@bayName (Occupied)</option>
+                                }
+                                else
+                                {
+                                    <option value="@bayName" selected="@(booking.AssignedBay == bayName)">@bayName</option>
+                                }
+                            }
+                        </select>
+                    </td>
+
+                    <!-- STAFF DROPDOWN -->
+                    <td>
+                        <select name="staffName" class="form-control" style="border-radius: 20px; border-color: #84B0D6;">
+                            <option value="">Unassigned</option>
+                            @if (staffList != null)
+                            {
+                                foreach (var staff in staffList)
+                                {
+                                    // Check if staff is occupied by SOMEONE ELSE or if their status is Busy
+                                    bool isOccupiedByOther = (occupiedStaff.Contains(staff.Name) && booking.AssignedStaff != staff.Name) || (staff.Status == "Busy" && booking.AssignedStaff != staff.Name);
+
+                                    if (isOccupiedByOther)
+                                    {
+                                        <option value="" disabled>@staff.Name (Busy)</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="@staff.Name" selected="@(booking.AssignedStaff == staff.Name)">@staff.Name</option>
+                                    }
+                                }
+                            }
+                        </select>
+                    </td>
+
+                    <!-- SAVE BUTTON -->
+                    <td>
+                        <button type="submit" class="btn btn-primary" style="border-radius: 20px; background-color: #5B4B8A; border: none;">SAVE</button>
+                    </td>
+                    </form>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,133 @@
+﻿body {
+}
+/* --- GEOMETRIC BACKGROUND --- */
+body {
+    background-color: #F0F7FF; /* Light blue base */
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Background Shapes */
+.bg-shape {
+    position: absolute;
+    z-index: -1;
+}
+
+.shape-1 {
+    top: 0;
+    right: 0;
+    width: 60vw;
+    height: 60vh;
+    background: #B5D5F0;
+    opacity: 0.6;
+    clip-path: polygon(100% 0, 100% 100%, 0 0);
+}
+
+.shape-2 {
+    bottom: 0;
+    left: 0;
+    width: 50vw;
+    height: 50vh;
+    background: #8CBDE2;
+    opacity: 0.3;
+    clip-path: polygon(0 0, 100% 100%, 0 100%);
+}
+
+.shape-3 {
+    top: 40%;
+    left: 40%;
+    width: 40vw;
+    height: 40vh;
+    background: #6DAEDB;
+    opacity: 0.2;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    transform: rotate(45deg);
+}
+
+/* --- LOGIN BOX --- */
+.login-box {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    backdrop-filter: blur(10px); /* Glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    z-index: 10;
+}
+
+/* --- CAR ICON DECOR --- */
+.icon-container {
+    width: 80px;
+    height: 80px;
+    background: #E6F0FA;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px auto;
+    box-shadow: 0 5px 15px rgba(43, 114, 181, 0.2);
+}
+
+.car-icon {
+    font-size: 40px;
+    color: #2B72B5; /* Primary Blue */
+}
+
+/* --- TYPOGRAPHY & FORM --- */
+.login-box h2 {
+    color: #08225E; /* Navy */
+    font-weight: 800;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    font-size: 24px;
+}
+
+.form-control {
+    border-radius: 10px;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #DCE8F3;
+    background-color: #F5F9FD;
+    font-size: 16px;
+}
+
+    .form-control:focus {
+        border-color: #2B72B5;
+        box-shadow: 0 0 0 0.2rem rgba(43, 114, 181, 0.25);
+    }
+
+.btn-login {
+    background-color: #2B72B5; /* Primary Blue */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    width: 100%;
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+    .btn-login:hover {
+        background-color: #1656A0;
+        transform: translateY(-2px);
+    }
+
+.error-text {
+    color: #dc3545;
+    font-size: 14px;
+    margin-bottom: 15px;
+    background: #ffe6e6;
+    padding: 10px;
+    border-radius: 8px;
+}

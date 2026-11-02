@@ -1,0 +1,58 @@
+﻿@model IEnumerable<LifeStyleCarwash.Web.Models.Bookings>
+@{
+    ViewData["Title"] = "Staff Update";
+}
+
+<h1 class="page-title">STAFF UPDATE BOARD</h1>
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+}
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+}
+
+@if (!Model.Any())
+{
+    <div class="text-center mt-5">
+        <h3 style="color: #6c757d;">No cars are currently being washed.</h3>
+        <p>Go to <a href="/Home/ManageBooking">Manage Booking</a> to assign a car to a bay.</p>
+    </div>
+}
+else
+{
+    <div class="row">
+        @foreach (var booking in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm" style="border-radius: 15px; border-top: 5px solid #2B72B5;">
+                    <div class="card-body text-center">
+                        <h4 class="card-title" style="font-weight: 800; color: #0f1035;">TICKET #@booking.Id</h4>
+                        <h5 class="text-muted mb-3">@booking.CustomerName</h5>
+
+                        <div class="badge bg-primary mb-3" style="font-size: 14px; padding: 8px 15px;">
+                            @booking.AssignedBay | @booking.AssignedStaff
+                        </div>
+
+                        <h6 class="mb-3" style="font-weight: bold;">@booking.ServiceType</h6>
+
+                        <!-- The Action Buttons -->
+                        <form asp-action="UpdateCarStatus" method="post">
+                            <input type="hidden" name="id" value="@booking.Id" />
+
+                            <button type="submit" name="newStatus" value="Ready" class="btn btn-success w-100 mb-2" style="border-radius: 10px; font-weight: bold; padding: 12px; font-size: 18px;">
+                                ✅ MARK AS DONE
+                            </button>
+
+                            <button type="submit" name="newStatus" value="Waiting" class="btn btn-outline-danger w-100" style="border-radius: 10px; font-weight: bold;">
+                                Send Back to Queue
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}

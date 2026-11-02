@@ -1,0 +1,109 @@
+@model LifeStyleCarwash.Web.Models.Bookings
+@{
+    ViewData["Title"] = "Customer Information";
+    var staffList = ViewBag.StaffList as List<LifeStyleCarwash.Web.Models.Staff> ?? new List<LifeStyleCarwash.Web.Models.Staff>();
+    var occupiedBays = ViewBag.OccupiedBays as List<string> ?? new List<string>();
+    var occupiedStaff = ViewBag.OccupiedStaff as List<string> ?? new List<string>();
+}
+
+<h1 class="page-title">CUSTOMER INFORMATION</h1>
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="info-panel">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="info-label">NAME:</div>
+                    <div class="info-value">@Model.CustomerName</div>
+                </div>
+                <div class="col-md-6">
+                    <div class="info-label">SERVICE BOOKED:</div>
+                    <div class="info-value">@Model.ServiceType</div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="info-label">NUMBER PLATE:</div>
+                    <div class="info-value">@(string.IsNullOrEmpty(Model.CarRegistration) ? "N/A" : Model.CarRegistration)</div>
+                </div>
+                <div class="col-md-6">
+                    <div class="info-label">CAR MODEL:</div>
+                    <div class="info-value">@(string.IsNullOrEmpty(Model.CarModel) ? "N/A" : Model.CarModel)</div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="info-label">AMOUNT PAID:</div>
+                    <div class="info-value">R @Model.AmountPaid.ToString("0.00")</div>
+                </div>
+                <div class="col-md-6">
+                    <div class="info-label">EMAIL / PHONE:</div>
+                    <div class="info-value">@Model.CustomerEmail / @Model.CustomerPhone</div>
+                </div>
+            </div>
+
+            <div class="info-label mt-4">VALUABLES:</div>
+            <textarea class="form-control" rows="3" readonly>@(Model.Valuables ?? "None")</textarea>
+
+            <form asp-action="UpdateBooking" method="post" class="mt-4">
+                <input type="hidden" name="id" value="@Model.Id" />
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <label class="info-label">STATUS</label>
+                        <select name="status" class="form-control" style="border-radius: 20px;">
+                            <option value="Waiting" selected="@(Model.Status == "Waiting")">Waiting</option>
+                            <option value="In Progress" selected="@(Model.Status == "In Progress")">In Progress</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label class="info-label">BAY</label>
+                        <select name="bay" class="form-control" style="border-radius: 20px;">
+                            <option value="">Unassigned</option>
+                            @for (int i = 1; i <= 6; i++)
+                            {
+                                var bayName = $"Bay {i}";
+                                bool isOccupiedByOther = occupiedBays.Contains(bayName) && Model.AssignedBay != bayName;
+
+                                if (isOccupiedByOther)
+                                {
+                                    <option value="" disabled>@bayName (Occupied)</option>
+                                }
+                                else
+                                {
+                                    <option value="@bayName" selected="@(Model.AssignedBay == bayName)">@bayName</option>
+                                }
+                            }
+                        </select>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label class="info-label">STAFF</label>
+                        <select name="staffName" class="form-control" style="border-radius: 20px;">
+                            <option value="">Unassigned</option>
+                            @if (staffList != null && staffList.Any())
+                            {
+                                foreach (var staff in staffList)
+                                {
+                                    bool isOccupiedByOther = occupiedStaff.Contains(staff.Name) && Model.AssignedStaff != staff.Name;
+
+                                    if (isOccupiedByOther)
+                                    {
+                                        <option value="" disabled>@staff.Name (Busy)</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="@staff.Name" selected="@(Model.AssignedStaff == staff.Name)">@staff.Name</option>
+                                    }
+                                }
+                            }
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary mt-4" style="border-radius: 20px; width: 100%; font-weight: bold; padding: 10px;">SAVE UPDATES</button>
+            </form>
+
+        </div>
+    </div>
+</div>

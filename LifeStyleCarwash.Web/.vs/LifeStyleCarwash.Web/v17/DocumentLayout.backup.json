@@ -1,0 +1,249 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\27812\\OneDrive\\Desktop\\web\\LifeStyleCarwash.Web\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DA6C3EDA-17D8-4958-890A-64584AF347CB}|LifeStyleCarwash.Web.csproj|c:\\users\\27812\\onedrive\\desktop\\web\\lifestylecarwash.web\\views\\home\\report.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DA6C3EDA-17D8-4958-890A-64584AF347CB}|LifeStyleCarwash.Web.csproj|solutionrelative:views\\home\\report.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA6C3EDA-17D8-4958-890A-64584AF347CB}|LifeStyleCarwash.Web.csproj|c:\\users\\27812\\onedrive\\desktop\\web\\lifestylecarwash.web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA6C3EDA-17D8-4958-890A-64584AF347CB}|LifeStyleCarwash.Web.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA6C3EDA-17D8-4958-890A-64584AF347CB}|LifeStyleCarwash.Web.csproj|c:\\users\\27812\\onedrive\\desktop\\web\\lifestylecarwash.web\\views\\home\\customerinfo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DA6C3EDA-17D8-4958-890A-64584AF347CB}|LifeStyleCarwash.Web.csproj|solutionrelative:views\\home\\customerinfo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA6C3EDA-17D8-4958-890A-64584AF347CB}|LifeStyleCarwash.Web.csproj|c:\\users\\27812\\onedrive\\desktop\\web\\lifestylecarwash.web\\models\\bookings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA6C3EDA-17D8-4958-890A-64584AF347CB}|LifeStyleCarwash.Web.csproj|solutionrelative:models\\bookings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA6C3EDA-17D8-4958-890A-64584AF347CB}|LifeStyleCarwash.Web.csproj|c:\\users\\27812\\onedrive\\desktop\\web\\lifestylecarwash.web\\views\\home\\managebooking.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DA6C3EDA-17D8-4958-890A-64584AF347CB}|LifeStyleCarwash.Web.csproj|solutionrelative:views\\home\\managebooking.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA6C3EDA-17D8-4958-890A-64584AF347CB}|LifeStyleCarwash.Web.csproj|c:\\users\\27812\\onedrive\\desktop\\web\\lifestylecarwash.web\\views\\home\\staffupdate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DA6C3EDA-17D8-4958-890A-64584AF347CB}|LifeStyleCarwash.Web.csproj|solutionrelative:views\\home\\staffupdate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA6C3EDA-17D8-4958-890A-64584AF347CB}|LifeStyleCarwash.Web.csproj|c:\\users\\27812\\onedrive\\desktop\\web\\lifestylecarwash.web\\views\\home\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DA6C3EDA-17D8-4958-890A-64584AF347CB}|LifeStyleCarwash.Web.csproj|solutionrelative:views\\home\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA6C3EDA-17D8-4958-890A-64584AF347CB}|LifeStyleCarwash.Web.csproj|c:\\users\\27812\\onedrive\\desktop\\web\\lifestylecarwash.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DA6C3EDA-17D8-4958-890A-64584AF347CB}|LifeStyleCarwash.Web.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA6C3EDA-17D8-4958-890A-64584AF347CB}|LifeStyleCarwash.Web.csproj|c:\\users\\27812\\onedrive\\desktop\\web\\lifestylecarwash.web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DA6C3EDA-17D8-4958-890A-64584AF347CB}|LifeStyleCarwash.Web.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA6C3EDA-17D8-4958-890A-64584AF347CB}|LifeStyleCarwash.Web.csproj|c:\\users\\27812\\onedrive\\desktop\\web\\lifestylecarwash.web\\models\\staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA6C3EDA-17D8-4958-890A-64584AF347CB}|LifeStyleCarwash.Web.csproj|solutionrelative:models\\staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA6C3EDA-17D8-4958-890A-64584AF347CB}|LifeStyleCarwash.Web.csproj|c:\\users\\27812\\onedrive\\desktop\\web\\lifestylecarwash.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA6C3EDA-17D8-4958-890A-64584AF347CB}|LifeStyleCarwash.Web.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA6C3EDA-17D8-4958-890A-64584AF347CB}|LifeStyleCarwash.Web.csproj|c:\\users\\27812\\onedrive\\desktop\\web\\lifestylecarwash.web\\wwwroot\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{DA6C3EDA-17D8-4958-890A-64584AF347CB}|LifeStyleCarwash.Web.csproj|solutionrelative:wwwroot\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA6C3EDA-17D8-4958-890A-64584AF347CB}|LifeStyleCarwash.Web.csproj|c:\\users\\27812\\onedrive\\desktop\\web\\lifestylecarwash.web\\models\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA6C3EDA-17D8-4958-890A-64584AF347CB}|LifeStyleCarwash.Web.csproj|solutionrelative:models\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA6C3EDA-17D8-4958-890A-64584AF347CB}|LifeStyleCarwash.Web.csproj|c:\\users\\27812\\onedrive\\desktop\\web\\lifestylecarwash.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DA6C3EDA-17D8-4958-890A-64584AF347CB}|LifeStyleCarwash.Web.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CustomerInfo.cshtml",
+              "DocumentMoniker": "C:\\Users\\27812\\OneDrive\\Desktop\\web\\LifeStyleCarwash.Web\\Views\\Home\\CustomerInfo.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\CustomerInfo.cshtml",
+              "ToolTip": "C:\\Users\\27812\\OneDrive\\Desktop\\web\\LifeStyleCarwash.Web\\Views\\Home\\CustomerInfo.cshtml",
+              "RelativeToolTip": "Views\\Home\\CustomerInfo.cshtml",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAAAGwAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-27T10:43:41.332Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Report.cshtml",
+              "DocumentMoniker": "C:\\Users\\27812\\OneDrive\\Desktop\\web\\LifeStyleCarwash.Web\\Views\\Home\\Report.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Report.cshtml",
+              "ToolTip": "C:\\Users\\27812\\OneDrive\\Desktop\\web\\LifeStyleCarwash.Web\\Views\\Home\\Report.cshtml",
+              "RelativeToolTip": "Views\\Home\\Report.cshtml",
+              "ViewState": "AgIAALIAAAAAAAAAAAAUwM8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-28T13:51:08.303Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\27812\\OneDrive\\Desktop\\web\\LifeStyleCarwash.Web\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\27812\\OneDrive\\Desktop\\web\\LifeStyleCarwash.Web\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAA4BAAAAAAAAAAAAACsBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T17:18:40.98Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Bookings.cs",
+              "DocumentMoniker": "C:\\Users\\27812\\OneDrive\\Desktop\\web\\LifeStyleCarwash.Web\\Models\\Bookings.cs",
+              "RelativeDocumentMoniker": "Models\\Bookings.cs",
+              "ToolTip": "C:\\Users\\27812\\OneDrive\\Desktop\\web\\LifeStyleCarwash.Web\\Models\\Bookings.cs",
+              "RelativeToolTip": "Models\\Bookings.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAuwCwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T17:21:40.389Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ManageBooking.cshtml",
+              "DocumentMoniker": "C:\\Users\\27812\\OneDrive\\Desktop\\web\\LifeStyleCarwash.Web\\Views\\Home\\ManageBooking.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\ManageBooking.cshtml",
+              "ToolTip": "C:\\Users\\27812\\OneDrive\\Desktop\\web\\LifeStyleCarwash.Web\\Views\\Home\\ManageBooking.cshtml",
+              "RelativeToolTip": "Views\\Home\\ManageBooking.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAADAAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-28T12:41:01.77Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "StaffUpdate.cshtml",
+              "DocumentMoniker": "C:\\Users\\27812\\OneDrive\\Desktop\\web\\LifeStyleCarwash.Web\\Views\\Home\\StaffUpdate.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\StaffUpdate.cshtml",
+              "ToolTip": "C:\\Users\\27812\\OneDrive\\Desktop\\web\\LifeStyleCarwash.Web\\Views\\Home\\StaffUpdate.cshtml",
+              "RelativeToolTip": "Views\\Home\\StaffUpdate.cshtml",
+              "ViewState": "AgIAABkAAAAAAAAAAAAUwDEAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-28T13:08:14.123Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\27812\\OneDrive\\Desktop\\web\\LifeStyleCarwash.Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\27812\\OneDrive\\Desktop\\web\\LifeStyleCarwash.Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-28T12:41:48.679Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\27812\\OneDrive\\Desktop\\web\\LifeStyleCarwash.Web\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\27812\\OneDrive\\Desktop\\web\\LifeStyleCarwash.Web\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAAAFYAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-26T17:22:30.93Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "C:\\Users\\27812\\OneDrive\\Desktop\\web\\LifeStyleCarwash.Web\\Views\\Home\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Dashboard.cshtml",
+              "ToolTip": "C:\\Users\\27812\\OneDrive\\Desktop\\web\\LifeStyleCarwash.Web\\Views\\Home\\Dashboard.cshtml",
+              "RelativeToolTip": "Views\\Home\\Dashboard.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-27T11:25:11.268Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Staff.cs",
+              "DocumentMoniker": "C:\\Users\\27812\\OneDrive\\Desktop\\web\\LifeStyleCarwash.Web\\Models\\Staff.cs",
+              "RelativeDocumentMoniker": "Models\\Staff.cs",
+              "ToolTip": "C:\\Users\\27812\\OneDrive\\Desktop\\web\\LifeStyleCarwash.Web\\Models\\Staff.cs",
+              "RelativeToolTip": "Models\\Staff.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-27T10:41:36.168Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "login.css",
+              "DocumentMoniker": "C:\\Users\\27812\\OneDrive\\Desktop\\web\\LifeStyleCarwash.Web\\wwwroot\\css\\login.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\login.css",
+              "ToolTip": "C:\\Users\\27812\\OneDrive\\Desktop\\web\\LifeStyleCarwash.Web\\wwwroot\\css\\login.css",
+              "RelativeToolTip": "wwwroot\\css\\login.css",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAAAIQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-10-26T17:54:10.389Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\27812\\OneDrive\\Desktop\\web\\LifeStyleCarwash.Web\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\27812\\OneDrive\\Desktop\\web\\LifeStyleCarwash.Web\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T17:11:10.906Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\27812\\OneDrive\\Desktop\\web\\LifeStyleCarwash.Web\\Models\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\LoginViewModel.cs",
+              "ToolTip": "C:\\Users\\27812\\OneDrive\\Desktop\\web\\LifeStyleCarwash.Web\\Models\\LoginViewModel.cs",
+              "RelativeToolTip": "Models\\LoginViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-26T17:38:05.275Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\27812\\OneDrive\\Desktop\\web\\LifeStyleCarwash.Web\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\27812\\OneDrive\\Desktop\\web\\LifeStyleCarwash.Web\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-10-26T17:14:15.521Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,188 @@
+/* Sidebar Styles */
+.sidebar {
+    height: 100vh;
+    width: 260px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #0f1035; /* Dark Blue */
+    padding-top: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    margin-bottom: 30px;
+}
+
+.sidebar-logo-icon {
+    background-color: #84B0D6;
+    color: #0f1035;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    margin-right: 15px;
+}
+
+.sidebar-logo-text {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+    .sidebar-menu li {
+        padding: 15px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .sidebar-menu a {
+        color: #B5CDE5;
+        text-decoration: none;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        transition: 0.3s;
+    }
+
+        .sidebar-menu a:hover, .sidebar-menu a.active {
+            color: white;
+            font-weight: bold;
+        }
+
+    .sidebar-menu i {
+        margin-right: 15px;
+        font-size: 20px;
+    }
+
+.logout-btn {
+    padding: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+    .logout-btn a {
+        color: #B5CDE5;
+        text-decoration: none;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+    }
+
+        .logout-btn a:hover {
+            color: white;
+        }
+
+/* Main Content Area */
+.main-content {
+    margin-left: 260px;
+    padding: 30px;
+    background-color: #F8F9FA;
+    min-height: 100vh;
+}
+
+.page-title {
+    color: #0f1035;
+    font-weight: 900;
+    font-size: 32px;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #84B0D6;
+    padding-bottom: 10px;
+}
+
+/* Cards */
+.stat-card {
+    border-radius: 15px;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.stat-title {
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.stat-value {
+    font-size: 36px;
+    font-weight: 900;
+}
+
+/* Card Colors */
+.card-purple {
+    background: linear-gradient(135deg, #5B4B8A, #7A68B5);
+}
+
+.card-light-purple {
+    background: linear-gradient(135deg, #9D8DCA, #B6A9E0);
+}
+
+/* Table */
+.custom-table {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+    .custom-table thead {
+        background-color: #DCE8F3;
+        color: #0f1035;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .custom-table th, .custom-table td {
+        padding: 15px 20px;
+        vertical-align: middle;
+    }
+
+.btn-view {
+    background-color: #6B5B95;
+    color: white;
+    border-radius: 8px;
+    padding: 5px 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+    .btn-view:hover {
+        background-color: #5B4B8A;
+        color: white;
+    }
+
+/* Customer Info Page */
+.info-panel {
+    background-color: #E6F0FA;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.info-label {
+    font-weight: 800;
+    color: #1656A0;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.info-value {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+}

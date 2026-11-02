@@ -1,0 +1,89 @@
+@model IEnumerable<LifeStyleCarwash.Web.Models.Bookings>
+    @{
+    ViewData["Title"] = "Dashboard";
+    }
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["ErrorMessage"]
+    </div>
+}
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+}
+
+    <h1 class="page-title">DASHBOARD</h1>
+
+    <!-- Top Cards -->
+    <div class="row">
+        <div class="col-md-3">
+            <div class="stat-card card-purple">
+                <div class="stat-title">Total Bookings</div>
+                <div class="stat-value">@ViewBag.TotalBookings</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="stat-card card-purple">
+                <div class="stat-title">Waiting</div>
+                <div class="stat-value">@ViewBag.Waiting</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="stat-card card-purple">
+                <div class="stat-title">In Progress</div>
+                <div class="stat-value">@ViewBag.InProgress</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="stat-card card-light-purple">
+                <div class="stat-title">Completed</div>
+                <div class="stat-value">@ViewBag.Ready</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-md-3">
+            <div class="stat-card card-light-purple">
+                <div class="stat-title">Available Bay</div>
+                <div class="stat-value">@ViewBag.AvailableBays</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="stat-card card-light-purple">
+                <div class="stat-title">Available Staff</div>
+                <div class="stat-value">@ViewBag.AvailableStaff</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Booking List Table -->
+    <h3 class="mt-5 mb-3" style="color: #0f1035; font-weight: 800;">BOOKING LIST</h3>
+    <table class="table custom-table">
+        <thead>
+            <tr>
+                <th>TICKET</th>
+                <th>CUSTOMER</th>
+                <th>SERVICE</th>
+                <th>ACTION</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var booking in Model)
+        {
+            <tr>
+                <td><strong>#@booking.Id</strong></td>
+                <td>@booking.CustomerName.ToUpper()</td>
+                <td>@booking.ServiceType.ToUpper()</td>
+                <td>
+                    <!-- Links to the Customer Info Page -->
+                    <a href="/Home/CustomerInfo/@booking.Id" class="btn-view">VIEW</a>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>

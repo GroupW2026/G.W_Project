@@ -1,0 +1,208 @@
+﻿@model IEnumerable<LifeStyleCarwash.Web.Models.Bookings>
+@{
+    ViewData["Title"] = "Report";
+}
+
+<!-- Load Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+    .report-card {
+        border-radius: 15px;
+        padding: 15px;
+        background: white;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        margin-bottom: 20px;
+    }
+
+    .report-title {
+        font-size: 12px;
+        font-weight: bold;
+        color: #6c757d;
+        text-transform: uppercase;
+    }
+
+    .report-value {
+        font-size: 28px;
+        font-weight: 900;
+        color: #0f1035;
+    }
+
+    .chart-container {
+        position: relative;
+        height: 300px;
+        width: 100%;
+    }
+
+    .history-table th {
+        background-color: #DCE8F3;
+        color: #0f1035;
+        font-weight: bold;
+    }
+</style>
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h1 class="page-title" style="border: none; padding: 0; margin: 0;">REPORT</h1>
+        <p class="text-muted">View and analyse carwash bookings, performance and revenue.</p>
+    </div>
+</div>
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+}
+
+<!-- TOP CARDS -->
+<div class="row">
+    <div class="col-md-2">
+        <div class="report-card">
+            <div class="report-title">Total Bookings</div>
+            <div class="report-value">@ViewBag.TotalBookings</div>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="report-card">
+            <div class="report-title">Waiting</div>
+            <div class="report-value text-danger">@ViewBag.Waiting</div>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="report-card">
+            <div class="report-title">In Progress</div>
+            <div class="report-value text-warning">@ViewBag.InProgress</div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="report-card">
+            <div class="report-title">Completed Washes</div>
+            <div class="report-value text-success">@ViewBag.Completed</div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="report-card">
+            <div class="report-title">Total Revenue</div>
+            <div class="report-value" style="color: #5B4B8A;">R @ViewBag.TotalRevenue.ToString("0.00")</div>
+        </div>
+    </div>
+</div>
+
+<!-- CHARTS ROW -->
+<div class="row mt-4">
+    <div class="col-md-7">
+        <div class="report-card">
+            <h6 class="mb-3 font-weight-bold">Bookings by Service Type</h6>
+            <div class="chart-container">
+                <canvas id="barChart"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-5">
+        <div class="report-card">
+            <h6 class="mb-3 font-weight-bold">Bookings by Status</h6>
+            <div class="chart-container">
+                <canvas id="doughnutChart"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- BOOKING HISTORY -->
+<div class="d-flex justify-content-between align-items-center mt-5 mb-3">
+    <h3 style="color: #0f1035; font-weight: 800; margin: 0;">BOOKING HISTORY</h3>
+</div>
+
+<div class="table-responsive">
+    <table class="table history-table">
+        <thead>
+            <tr>
+                <th>TICKET</th>
+                <th>CUSTOMER</th>
+                <th>SERVICE</th>
+                <th>STATUS</th>
+                <th>BAY</th>
+                <th>STAFF</th>
+                <th>BOOKING TIME</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (!Model.Any())
+            {
+                <tr>
+                    <td colspan="7" class="text-center text-muted py-4">No completed bookings yet.</td>
+                </tr>
+            }
+            else
+            {
+                foreach (var booking in Model)
+                {
+                    <tr>
+                        <td><strong>#@booking.Id</strong></td>
+                        <td>@booking.CustomerName.ToUpper()</td>
+                        <td>@booking.ServiceType.ToUpper()</td>
+                        <td><span class="badge bg-success">@booking.Status.ToUpper()</span></td>
+                        <td>@(string.IsNullOrEmpty(booking.AssignedBay) ? "N/A" : booking.AssignedBay)</td>
+                        <td>@(string.IsNullOrEmpty(booking.AssignedStaff) ? "N/A" : booking.AssignedStaff)</td>
+                        <td>2026-10-29</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
+<!-- JAVASCRIPT FOR CHARTS -->
+<script>
+    // Parse data from C# (using Html.Raw to prevent encoding issues)
+    const serviceLabels = @Html.Raw(ViewBag.ChartLabels);
+    const serviceData = @Html.Raw(ViewBag.ChartData);
+
+    // Shorten long labels to prevent overlapping
+    const shortenedLabels = serviceLabels.map(label => {
+        if (label.length > 15) return label.substring(0, 15) + '...';
+        return label;
+    });
+
+    new Chart(document.getElementById('barChart'), {
+        type: 'bar',
+        data: {
+            labels: shortenedLabels,
+            datasets: [{
+                label: 'Bookings',
+                data: serviceData,
+                backgroundColor: ['#3b82f6', '#10b981', '#8b5cf6', '#f59e0b', '#ef4444', '#14b8a6', '#f43f5e'],
+                borderRadius: 5
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            scales: {
+                y: { beginAtZero: true, ticks: { stepSize: 1 } } // Force integer steps
+            }
+        }
+    });
+
+    // Doughnut Chart Data
+    const statusLabels = @Html.Raw(ViewBag.StatusLabels);
+    const statusData = @Html.Raw(ViewBag.StatusData);
+
+    new Chart(document.getElementById('doughnutChart'), {
+        type: 'doughnut',
+        data: {
+            labels: statusLabels,
+            datasets: [{
+                data: statusData,
+                backgroundColor: ['#f59e0b', '#3b82f6', '#10b981'],
+                borderWidth: 0
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            cutout: '70%',
+            plugins: { legend: { position: 'right' } }
+        }
+    });
+</script>
